@@ -1,0 +1,30 @@
+.BreadCrumb {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    padding: 2px 0;
+    background-color: rgba(78, 90, 121, 0.678);
+    border-top: 1px solid rgba(122, 199, 202, 0.452);
+    border-bottom: 1px solid rgb(61, 110, 112);
+
+    &__Step {
+        margin: -1px auto;
+        color: white;
+        width: 25%;
+        border-right: 2px solid rgba(73, 116, 117, 0.452);
+        
+
+    }
+
+    .--active {
+        background-color: rgba(87, 100, 133, 0.876);
+    }
+
+    &__Arrow {
+        color: white;
+        font-weight: bold;
+        padding: 0 0 0 1rem;
+        width: 40px;
+    }
+}

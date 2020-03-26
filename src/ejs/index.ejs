@@ -14,64 +14,51 @@
 </head>
 
 <body>
-    <header>
-        
-        <div class="Panel">
-            <caption class="Title"> Selection Panel </caption>
-            <button onclick="panelClick('Race')" class="Button"> Select Race </button>
-            <button onclick="panelClick('Slug')" class="Button"> Select Slug </button>
-            <button onclick="panelClick('Bet')" class="Button"> Select Bet </button>
-        </div>
-
-        <div class="Panel Panel__Race">
-            <caption class="Title"> Select Race </caption>
-            <div class="Panel Panel__Race--Select">
-                <h2> Desert Race </h2>
-                <p> Goal: 40 </p>
+    
+    <div class="page">
+        <header class="header">
+            <h1 class="header__Title"> Betting Office </h1>
+        </header>
+        <main class="main">
+            <div class="BreadCrumb">
+                <div class="BreadCrumb__Step --active">
+                    <span class="BreadCrumb__Step-Name"> Select Race </span> 
+                    <span class="BreadCrumb__Arrow"> > </span>
+                </div>
+                <div class="BreadCrumb__Step">
+                    <span class="BreadCrumb__Step-Name"> Select Slug </span> 
+                    <span class="BreadCrumb__Arrow"> > </span>
+                </div>
+                <div class="BreadCrumb__Step">
+                    <span class="BreadCrumb__Step-Name"> Select Bet </span> 
+                    <span class="BreadCrumb__Arrow"> > </span>
+                </div>
+                <div class="BreadCrumb__Step">
+                    <span class="BreadCrumb__Step-Name"> Race Overview </span> 
+                </div>
             </div>
-            <div class="Panel Panel__Race--Select">
-                <h2> Forest Race </h2>
-                <p> Goal: 30 </p>
+            <div class="Selection">
+                <h2 class="Selection__Title"> Race Selection </h2>
+                <div class="Race">
+                    <h3 class="Race__Title"> Race1 Title </h3>
+                    <p class="Race__Description"> Race Description Lorem Ipsum sorom delim </p>
+                    <p class="Race__Goal"> Goal: <span class="Race__Goal-Units"> 30 </span> Units </p>
+                    <p class="Race__Multiplier"> Win Multiplier: <span class="Race__Win-Multiplier"> x2 </span> </p>
+                    <button> Select Race </button>
+                </div>
+                <div class="Race">
+                    <h3 class="Race__Title"> Race1 Title </h3>
+                    <p class="Race__Description"> Race Description Lorem Ipsum sorom delim </p>
+                    <p class="Race__Goal"> Goal: <span class="Race__Goal-Units"> 30 </span> Units </p>
+                    <p class="Race__Multiplier"> Win Multiplier: <span class="Race__Win-Multiplier"> x2 </span> </p>
+                    <button> Select Race </button>
+                </div>
             </div>
-            <div class="Panel Panel__Race--Select">
-                <h2> Cave Race </h2>
-                <p> Goal: 20 </p>
-            </div>
-        </div>
-
-        <div class="Panel Panel__Slug">
-            <caption class="Title"> Select Slug </caption>
-            <div class="Panel Panel__Slug--Select">
-                <h2> Desert Slug </h2>
-                <p> Speed: 4 </p>
-            </div>
-            <div class="Panel Panel__Slug--Select">
-                <h2> Forest Slug </h2>
-                <p> Speed: 3 </p>
-            </div>
-            <div class="Panel Panel__Slug--Select">
-                <h2> Cave Slug </h2>
-                <p> Speed: 2 </p>
-            </div>
-        </div>
-
-        <div class="Panel Panel__Bet">
-            <caption class="Title"> Select Bet </caption>
-            <div class="Panel Panel__Bet--Select">
-                <h2> Low Bet </h2>
-                <p>  Bet: 120$  </p>
-            </div>
-            <div class="Panel Panel__Bet--Select">
-                <h2> Medium Bet </h2>
-                <p>  Bet: 400$  </p>
-            </div>
-            <div class="Panel Panel__Bet--Select">
-                <h2> High Bet </h2>
-                <p>  Bet: 860$  </p>
-            </div>
-        </div>
-
-    </header>
+        </main>
+    </div>
+    <footer class="footer">
+        <h1 class="footer__Title"> Thanks for choosing us once again </h1>
+    </footer>
 
     <!-- Imports Scripts -->
     <% htmlWebpackPlugin.files.js.forEach(function(file){ %>
