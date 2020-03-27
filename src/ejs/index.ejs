@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>    
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -9,60 +9,109 @@
 
     <!-- Imports Stylesheets -->
     <% htmlWebpackPlugin.files.css.forEach(function(file){ %>
-        <link href="<%- file %>" rel="stylesheet">
+    <link href="<%- file %>" rel="stylesheet">
     <% }); %>
 </head>
 
 <body>
-    
+
     <div class="page">
         <header class="header">
             <h1 class="header__Title"> Betting Office </h1>
         </header>
         <main class="main">
+
+            <!-- Breadcrumb Navigation displaying current Step -->
             <div class="BreadCrumb">
-                <div class="BreadCrumb__Step --active">
-                    <span class="BreadCrumb__Step-Name"> Select Race </span> 
+                <div id="step1" class="BreadCrumb__Step --active">
+                    <span class="BreadCrumb__Step-Name"> Select Race </span>
                     <span class="BreadCrumb__Arrow"> > </span>
                 </div>
-                <div class="BreadCrumb__Step">
-                    <span class="BreadCrumb__Step-Name"> Select Slug </span> 
+                <div id="step2" class="BreadCrumb__Step">
+                    <span class="BreadCrumb__Step-Name"> Select Slug </span>
                     <span class="BreadCrumb__Arrow"> > </span>
                 </div>
-                <div class="BreadCrumb__Step">
-                    <span class="BreadCrumb__Step-Name"> Select Bet </span> 
+                <div id="step3" class="BreadCrumb__Step">
+                    <span class="BreadCrumb__Step-Name"> Select Bet </span>
                     <span class="BreadCrumb__Arrow"> > </span>
                 </div>
-                <div class="BreadCrumb__Step">
-                    <span class="BreadCrumb__Step-Name"> Race Overview </span> 
+                <div id="step4" class="BreadCrumb__Step">
+                    <span class="BreadCrumb__Step-Name"> Race Overview </span>
                 </div>
             </div>
-            <div class="Selection">
-                <h2 class="Selection__Title"> Race Selection </h2>
-                <div class="Race">
-                    <h3 class="Race__Title"> Race1 Title </h3>
-                    <p class="Race__Description"> Race Description Lorem Ipsum sorom delim </p>
-                    <p class="Race__Goal"> Goal: <span class="Race__Goal-Units"> 30 </span> Units </p>
-                    <p class="Race__Multiplier"> Win Multiplier: <span class="Race__Win-Multiplier"> x2 </span> </p>
-                    <button> Select Race </button>
+
+            <!-- Selections for BreadCrumb Navigation -->
+            <div id="select1" class="selection"> <!-- Selection for Step 1 -->
+                <h2 class="selection__title"> Races </h2>
+                <div class="selection__itemContainer">
+                    <section class="selection__item item">
+                        <h3 class="item__title"> <span class="value"> Forest Race </span> </h3>
+                        <p class="item__field"> Goal: <span class="value"> 60 </span> </p>
+                        <button onClick="select(1, 'Race', 'Forest')" class="item__button"> Choose Forest Race </button>
+                    </section>
+                    <section class="selection__item item">
+                        <h3 class="item__title"> <span class="value"> Hill Race </span> </h3>
+                        <p class="item__field"> Goal: <span class="value"> 35 </span> units </p>
+                        <button onClick="select(1, 'Race', 'Hill')" class="item__button"> Choose Hill Race </button>
+                    </section>
                 </div>
-                <div class="Race">
-                    <h3 class="Race__Title"> Race1 Title </h3>
-                    <p class="Race__Description"> Race Description Lorem Ipsum sorom delim </p>
-                    <p class="Race__Goal"> Goal: <span class="Race__Goal-Units"> 30 </span> Units </p>
-                    <p class="Race__Multiplier"> Win Multiplier: <span class="Race__Win-Multiplier"> x2 </span> </p>
-                    <button> Select Race </button>
+            </div>
+            <div id="select2" class="selection"> <!-- Selection for Step 2 -->
+                <h2 class="selection__title"> Slugs </h2>
+                <div class="selection__itemContainer">
+                    <section class="selection__item item">
+                        <h3 class="item__title"> <span class="value"> Forest Slug </span> </h3>
+                        <p class="item__field"> Speed: <span class="value"> 5 </span> </p>
+                        <button onClick="select(2, 'Slug', 'Forest')" class="item__button"> Choose Forest Slug </button>
+                    </section>
+                    <section class="selection__item item">
+                        <h3 class="item__title"> <span class="value"> Hill Slug </span> </h3>
+                        <p class="item__field"> Speed: <span class="value"> 3 </span> </p>
+                        <button onClick="select(2, 'Slug', 'Hill')" class="item__button"> Choose Hill Slug </button>
+                    </section>
                 </div>
+            </div>
+            <div id="select3" class="selection"> <!-- Selection for Step 3 -->
+                <h2 class="selection__title"> Bets </h2>
+                <div class="selection__itemContainer">
+                    <section class="selection__item item">
+                        <h3 class="item__title"> <span class="value"> Low Bet </span> </h3>
+                        <p class="item__field"> Amount: <span class="value"> 5 </span> </p>
+                        <button onClick="select(3, 'Bet', 'Low')" class="item__button"> Choose Low Bet </button>
+                    </section>
+                    <section class="selection__item item">
+                        <h3 class="item__title"> <span class="value"> High Bet </span> </h3>
+                        <p class="item__field"> Amount: <span class="value"> 3 </span> </p>
+                        <button onClick="select(3, 'Bet', 'High')" class="item__button"> Choose High Bet </button>
+                    </section>
+                </div>
+            </div>
+            <div id="select4" class="selection"> <!-- Selection for Step 4 -->
+                <h2 class="selection__title"> Overview </h2>
+                <div class="selection__itemContainer">
+                    <section class="selection__item item--last item">
+                        <p class="item__field"> Race: ... </p>
+                        <p class="item__field"> Slug: ... </p>
+                        <p class="item__field"> Bet: ... </p>
+                        <button onClick="select(4, 'Overview', 'Start')" class="item__button"> Start Race </button>
+                    </section>
+                </div>
+            </div>
+
+            <!-- Actual div to hold an active Race -->
+            <div id="game">
+                <h1> ACTIVE RACE </h1>
             </div>
         </main>
     </div>
+
     <footer class="footer">
         <h1 class="footer__Title"> Thanks for choosing us once again </h1>
     </footer>
 
     <!-- Imports Scripts -->
     <% htmlWebpackPlugin.files.js.forEach(function(file){ %>
-        <script src="<%- file %>"></script>
+    <script src="<%- file %>"></script>
     <% }); %>
 </body>
 

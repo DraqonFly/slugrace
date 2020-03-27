@@ -1,0 +1,58 @@
+.selection {
+    margin: 10px;
+    padding: 6px 2px 1px 12px;
+    background-color: rgba(26, 26, 26, 0.6);
+    border-radius: 5px;
+
+    &__title {
+        margin-bottom: 5px;
+    }
+
+    &__itemContainer {
+        display: flex;
+    }
+
+    &__item {
+        background-color: rgba(72, 73, 78, 0.9);
+        margin: 0 10px 10px 0;
+        padding: 6px 2px 1px 12px;
+        border-radius: 5px;
+    }
+}
+
+.item {
+    width: 50%;
+    
+    &--last {
+        width: 100%;
+    }
+
+    &__title {
+        background-color: rgba(72, 75, 90, 0.9);
+        margin: -5px -2px 6px -11.5px;
+        padding: 2px 4px;
+        border-radius: 5px;
+    }
+    
+    &__button {
+        width: 99%;
+        margin: 5px 0 6px 0;
+        border-radius: 5px;
+    }
+}
+
+#select2, #select3, #select4, #game {
+    display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+

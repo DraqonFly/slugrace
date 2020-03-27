@@ -1,0 +1,12 @@
+.header {
+    background-color: rgba(5, 17, 46, 0.3);
+    padding: 5px;
+    font-size: 14px;
+
+    &__Title {
+        padding: 2px 8px;
+        letter-spacing: 2px;
+        color: rgb(202, 213, 255);
+        text-align: right;
+    }
+}

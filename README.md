@@ -1,15 +1,17 @@
-# Todolist
-- Restyle Selection Panel
-- Create start race panel
-- Add Point-Price for betting on Snails
-- Add Tournaments
-- Create Racing Animation
-- Create Class Instances
-- Create Race Summary
-- Turn Race mechanism into cycle
+# Betting Office
+##### JS - EJS - SCSS - ES2020 - Webpack - Node
 
-&nbsp; 
+___
 
-# Buglist
--  BreadCrumb only works for screens larger than 640px.
+### Features
+- Breadcrumb Navigation
+- Class Templates for Selections
 
+&nbsp;
+___
+
+### Todo
+- Rework Overview panel
+- Create Race Mechanism
+- Create Screen for Race End
+- Cycle the complete application
