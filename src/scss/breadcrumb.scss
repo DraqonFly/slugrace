@@ -8,6 +8,7 @@
     font-weight: bold;
     background-color: rgba(78, 90, 121, 0.678);
     border-top: 1px solid rgba(86, 121, 122, 0.452);
+    cursor: default;
 
     &__Step {
         padding-top: 1px;
@@ -18,19 +19,25 @@
         transition: .18s;
     }
 
-    #step4 {
-        border-right: 2px solid rgba(0, 0, 0, 0);
+    &__Arrow {
+        color: white;
+        font-weight: bold;
+        float: right;
+        width: 20px;
     }
 
     .--active {
         background-color: rgba(96, 117, 168, 0.876);
         color: rgba(130, 199, 255, 0.876);
     }
-
-    &__Arrow {
+    #step4.--active {
+        background-color: rgba(177, 48, 48, 0.678);
         color: white;
-        font-weight: bold;
-        float: right;
-        width: 20px;
+        border-right: 2px solid rgba(102, 38, 38, 0.137);  
+    }
+
+    .--done {
+        background-color: rgba(113, 168, 96, 0.781);
+        color: rgb(22, 46, 16);
     }
 }

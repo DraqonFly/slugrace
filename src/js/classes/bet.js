@@ -1,11 +1,13 @@
 export class Bet 
 {
+    name;
     bet;
 
-    constructor(bet)
+    constructor(name, bet)
     {
+        this.name = name + "("+bet+"$)";
         this.bet = bet;
-        console.log("[SYC] Bet constructed");
+        console.log("%c[SYC] Bet constructed", "color: rgb(120, 190, 255)");
     }
 
     toString = (directLog) => directLog  

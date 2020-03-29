@@ -4,6 +4,14 @@ html, p, body, h1, h2, h3, h4, h5, h6, section, article, form, ul, li, ol {
     font-family: Arial, Helvetica, sans-serif;
 }
 
+h1, h2, h3, h4, h5, h6, caption, figcaption {
+    cursor: default;
+}
+
+button {
+    cursor: pointer;
+}
+
 form, input, button, textarea, select, option {
     outline: none;
     border: 2px solid rgb(180, 180, 180)
@@ -17,4 +25,8 @@ html {
 
 body {
     margin: 0 auto;
+}
+
+img {
+    max-width: 100%;
 }

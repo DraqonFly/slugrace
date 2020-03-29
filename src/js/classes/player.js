@@ -6,7 +6,7 @@ class Player
     constructor(name, balance) {
         this.name = name;
         this.balance = balance;
-        console.log("[SYC] Player constructed");
+        console.log("%c[SYC] Player constructed", "color: rgb(120, 190, 255)");
     }
 
     toString = (directLog) => directLog  

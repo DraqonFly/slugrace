@@ -1,6 +1,7 @@
 @import "./reset";
 @import "./borders";
 
+
 body {
     color: whitesmoke;
     font-size: 1.1rem;
@@ -16,6 +17,45 @@ body {
 .main {
     padding: 0
 }
+
+#game {
+    width: 100%;
+    background: rgb(50, 50, 50);
+}
+
+.racingSlug {
+    width: 100px;
+    padding: 4px;
+    margin: 3px;
+    border-radius: 4px;
+    background: rgba(255, 255, 255, 0.2);
+    text-align: right;
+    transition: 1s;
+}
+
+.finishLine {
+    width: 3px;
+    margin-left: -3px;
+    height: auto;
+    background-color: red;
+}
+
+.raceContainer {
+    display: flex;
+}
+
+.Balance {
+    margin-left: -5px;
+    padding: 4px 10px;
+    color: rgb(88, 211, 88);
+    bottom: 0;
+    background: rgba(0, 60, 255, 0.212);
+    border-top-right-radius: 10px;
+    border-top: 2px solid rgba(11, 11, 88, 0.513);
+    border-right: 2px solid rgba(11, 11, 88, 0.513);
+    position: absolute;
+}
+
 
 @import "./header";
 @import "./footer";

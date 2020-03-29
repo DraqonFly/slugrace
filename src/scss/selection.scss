@@ -1,57 +1,79 @@
-.selection {
-    margin: 10px;
-    padding: 6px 2px 1px 12px;
-    background-color: rgba(26, 26, 26, 0.6);
-    border-radius: 5px;
-
-    &__title {
-        margin-bottom: 5px;
-    }
-
-    &__itemContainer {
-        display: flex;
-    }
-
-    &__item {
-        background-color: rgba(72, 73, 78, 0.9);
-        margin: 0 10px 10px 0;
-        padding: 6px 2px 1px 12px;
-        border-radius: 5px;
-    }
-}
-
-.item {
-    width: 50%;
-    
-    &--last {
-        width: 100%;
-    }
-
-    &__title {
-        background-color: rgba(72, 75, 90, 0.9);
-        margin: -5px -2px 6px -11.5px;
-        padding: 2px 4px;
-        border-radius: 5px;
-    }
-    
-    &__button {
-        width: 99%;
-        margin: 5px 0 6px 0;
-        border-radius: 5px;
-    }
-}
-
 #select2, #select3, #select4, #game {
     display: none;
 }
 
+.selection {
+    width: 100%;
+    margin: 0 auto;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    background: rgb(18,18,18);
+    background: linear-gradient(45deg, rgba(18,18,18,1) 0%, rgba(102,102,102,0.9105781961221989) 100%);
 
+    &__item {
+        padding: 4px 10px;
+        margin-top: -1px;
+        background: rgba(27, 23, 23, 0.678);
+        box-shadow: inset 0 0 2px 1px rgb(134, 211, 221);
+    }
 
+    .item {
+        &__button {
+            width: 100%;
+            margin-bottom: 4px;
+            border: 1px solid rgb(174, 210, 233);
+            background-color: rgb(59, 84, 90);
+            transition: .2s;
 
+            &:hover {
+                color: rgb(235, 235, 235);
+                border: 1px solid rgb(189, 223, 245);
+                background-color: rgb(77, 114, 124);                
+            }
 
+            &:active {
+                color: rgb(255, 255, 255);
+                border: 1px solid rgb(218, 239, 253);
+                background-color: rgb(133, 178, 190);                
+            }
+        }
+    }
+}
 
+/*
+#select1 {
 
+    #race1 {
 
+    }
+    #race2 {
+
+    }
+
+}
+#select2 {
+
+    #slug1 {
+
+    }
+    #slug2 {
+
+    }
+
+}
+#select3 {
+    #bet1 {
+
+    }
+    #bet2 {
+
+    }
+
+}
+#select4 {
+
+}
+*/
 
 
 
